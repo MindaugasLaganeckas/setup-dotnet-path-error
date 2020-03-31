@@ -6,11 +6,13 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
+      - name: Print dotnet version before
+        run: dotnet --version 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1.4.0
         with:
           dotnet-version: '3.1.101'
-      - name: Print dotnet version
+      - name: Print dotnet version after
         run: dotnet --version
      
 
