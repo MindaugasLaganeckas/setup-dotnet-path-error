@@ -23,5 +23,23 @@ jobs:
           cd $Env:DOTNET_ROOT
           ls
           ./dotnet.exe --version
+  build-ubuntu:
+    env:
+      DOTNET_ROOT: ""
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1.4.0
+        with:
+          dotnet-version: '3.1.101'
+      - name: Print dotnet version
+        run: dotnet --version
+      - name: List files
+        run: ls $DOTNET_ROOT
+      - name: Print dotnet version using path
+        run: |
+          cd $DOTNET_ROOT
+          ls
+          ./dotnet --version
      
 
