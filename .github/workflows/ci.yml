@@ -18,5 +18,6 @@ jobs:
         run: dotnet --version
       - name: Print dotnet version using path
         run: $DOTNET_ROOT/dotnet --version
+        shell: pwsh
      
 
