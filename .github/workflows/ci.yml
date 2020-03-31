@@ -4,6 +4,8 @@ on: [push, pull_request]
 
 jobs:
   build-windows:
+    env:
+      DOTNET_ROOT: ""
     runs-on: windows-latest
     steps:
       - name: Print dotnet version before
@@ -14,5 +16,7 @@ jobs:
           dotnet-version: '3.1.101'
       - name: Print dotnet version after
         run: dotnet --version
+      - name: Print dotnet version using path
+        run: $DOTNET_ROOT/dotnet --version
      
 
