@@ -19,7 +19,6 @@ jobs:
       - name: List files
         run: ls $Env:DOTNET_ROOT
       - name: Print dotnet version using path
-        run: $Env:DOTNET_ROOT\\dotnet --version
-        shell: pwsh
+        run: pwsh $Env:DOTNET_ROOT/dotnet --version
      
 
